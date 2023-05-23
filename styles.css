@@ -8,3 +8,12 @@ red - #ee5253
 
 */
 
+.nav-bar{
+    font-family:"Roboto";
+    font-size: 12px;
+    background-color: #0fb9b1;
+    border: black;
+    border-width: 100px;
+}
+
+/* why isn't border width showing up?? */
