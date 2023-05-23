@@ -19,6 +19,13 @@ red - #ee5253
 }
 /* why isn't border width showing up?? */
 
+/* .h1{ */
+    /* position: left; */
+    /* top: 25px; */
+/* } */
+/* how can i target h1, even thought it's in the nav element, and doesn't 
+have it's own class or id?? */
+
 #add-recipe-button{
     position:absolute;
     top: 25px;;
