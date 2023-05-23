@@ -8,18 +8,23 @@ red - #ee5253
 
 */
 
+
 .nav-bar{
     font-family:"Roboto";
-    font-size: 12px;
+    font-size: 16px;
     background-color: #0fb9b1;
     border: black;
     border-width: 100px;
+    height: 50px
 }
 /* why isn't border width showing up?? */
+
 #add-recipe-button{
-    margin-right
+    position:absolute;
+    top: 25px;;
+    right:25px;
 }
 
-/* margin-right did not work to move button */
-/* check this resource, may need to change nav to div: */
+/* check this resource
 /* // https://stackoverflow.com/questions/18750803/getting-the-button-into-the-top-right-corner-inside-the-div-box */
+
