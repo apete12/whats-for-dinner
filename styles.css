@@ -15,5 +15,11 @@ red - #ee5253
     border: black;
     border-width: 100px;
 }
-
 /* why isn't border width showing up?? */
+#add-recipe-button{
+    margin-right
+}
+
+/* margin-right did not work to move button */
+/* check this resource, may need to change nav to div: */
+/* // https://stackoverflow.com/questions/18750803/getting-the-button-into-the-top-right-corner-inside-the-div-box */
