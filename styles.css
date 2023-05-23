@@ -35,3 +35,17 @@ have it's own class or id?? */
 /* check this resource
 /* // https://stackoverflow.com/questions/18750803/getting-the-button-into-the-top-right-corner-inside-the-div-box */
 
+#choose-meal-type{
+    background-color: red;
+    border-color: black;
+    border-width: 50px;
+    /* border-width: 50px; */
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 200px;;
+    left: 200px;
+}
+
+/* https://www.w3schools.com/css/css_float_examples.asp */
+
