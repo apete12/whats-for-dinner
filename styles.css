@@ -38,6 +38,15 @@ h4 {
     top: 25px;;
     right:25px;
 }
+.lets-cook-button {
+    margin: 25px;
+}
+.clear-button {
+    border-style: solid black;
+    padding: 275 px;
+    background-color: #95a5a6;
+    position: absolute;
+}
 .choose-meal-type{
     background-color: rgba(225, 225, 225, .9);
     border-color: black;
@@ -59,17 +68,10 @@ h4 {
     top: 200px;
     right: 200px;
 }
-
-
-
-
 .img{
     height: 100px;
     width: auto;
     position: center;
-}
-.lets-cook-button {
-    margin: 25px;
 }
 body {
     background-size: cover;
