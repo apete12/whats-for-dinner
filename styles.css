@@ -28,39 +28,27 @@ h1{
     top: 25px;;
     right:25px;
 }
-
-
-
-
-
-
-
-
-
-
-
-/* check this resource
-/* // https://stackoverflow.com/questions/18750803/getting-the-button-into-the-top-right-corner-inside-the-div-box */
-
-/* #choose-meal-type{ */
-    /* background-color: white; */
-    /* border-color: black; */
-    /* border-width: 50px; */
-    /* border-width: 50px; */
-    /* height: 300px; */
-    /* width: 300px; */
-    /* position: absolute; */
-    /* top: 200px;; */
-    /* left: 200px; */
-/* } */
-/* #display-random-meal-type{ */
-    /* background-color: red; */
-    /* border-color: black; */
-    /* border-width: 50px; */
-    /* position: absolute; */
-    /* top: 200px; */
-    /* right: 200px; */
-/* } */
+#choose-meal-type{
+    background-color: white;
+    border-color: black;
+    border-width: 50px;
+    border-width: 50px;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 200px;;
+    left: 200px;
+}
+#display-random-meal-type{
+    background-color: white;
+    border-color: black;
+    border-width: 50px;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+}
 body {
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,5 +57,4 @@ body {
     background-image: url("./assets/burger-friends.jpg");
 }
 
-/* https://www.w3schools.com/css/css_float_examples.asp */
 
