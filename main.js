@@ -49,3 +49,33 @@ var desserts = [
     'Croissants',
     'Eclairs',
 ]
+
+// query selectors
+
+// buttons:
+var sideButton = document.querySelector('.side');
+var mainDishButton = document.querySelector('.main-dish');
+var dessertButton = document.querySelector('.dessert');
+var letsCookButton = document.querySelector('.lets-ccok-button');
+var clearButton = document.querySelector('.clear-button');
+
+// text
+var youShouldMakeText = document.querySelector('.you-should-make');
+var itemToDisplay = document.querySelector('.item');
+
+// imgage
+var cookpotImg = document.querySelector('.pot')
+
+// event listeners
+
+// global variables?
+
+// functions
+
+function randomIndexNumber() {
+
+}
+
+function randomFoodType() {
+
+}
