@@ -19,10 +19,12 @@ red - #ee5253
 h1{
     padding: 10px
 }
-.img{
-    height: 100px;
-    width: auto;
-    position: center;
+h2{
+    padding: 25px;
+}
+h3,
+h4 {
+   visibility: hidden; 
 }
 .add-recipe-button{
     position:absolute;
@@ -51,13 +53,17 @@ h1{
     right: 200px;
 }
 
-h2{
-    padding: 25px;
+
+
+
+.img{
+    height: 100px;
+    width: auto;
+    position: center;
 }
 .lets-cook-button {
     margin: 25px;
 }
-
 body {
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,5 +71,9 @@ body {
     background-attachment: fixed;
     background-image: url("./assets/burger-friends.jpg");
 }
+
+
+
+
 
 
