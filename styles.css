@@ -19,17 +19,18 @@ red - #ee5253
 h1{
     padding: 10px
 }
-.pot{
-    height: 200px;
+.img{
+    height: 100px;
     width: auto;
+    position: center;
 }
 .add-recipe-button{
     position:absolute;
     top: 25px;;
     right:25px;
 }
-#choose-meal-type{
-    background-color: white;
+.choose-meal-type{
+    background-color: rgba(225, 225, 225, .9);
     border-color: black;
     border-width: 50px;
     border-width: 50px;
@@ -39,8 +40,8 @@ h1{
     top: 200px;;
     left: 200px;
 }
-#display-random-meal-type{
-    background-color: white;
+.display-random-meal-type{
+    background-color: rgba(225, 225, 225, .9);
     border-color: black;
     border-width: 50px;
     height: 300px;
@@ -49,6 +50,14 @@ h1{
     top: 200px;
     right: 200px;
 }
+
+h2{
+    padding: 25px;
+}
+.lets-cook-button {
+    margin: 25px;
+}
+
 body {
     background-size: cover;
     background-repeat: no-repeat;
