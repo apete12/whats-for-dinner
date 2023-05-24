@@ -1,3 +1,4 @@
+
 var sides = [
 'Miso Glazed Carrots',
 'Coleslaw',
@@ -10,6 +11,7 @@ var sides = [
 'Garlic Butter Mushrooms',
 'Hush Puppies',
 ]
+
 
 var mains = [
     'Spaghetti and Meatballs',
