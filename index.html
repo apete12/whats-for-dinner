@@ -5,25 +5,32 @@
     <title>What's For Dinner?</title>
   </head>
   <body>
-    <nav class="nav-bar">
-      <h1>What's for Dinner?</h1>
-      <button type="button" name="add-recipe-button" class="add-recipe-button">Add Recipe</button>
-    </nav>
-    <section class="choose-meal-type">
-      <h2>What Are You Looking For?*</h2>
-        <ul style="list-style-type:none">
-          <li><input type="radio" id="side">Side</li>
-          <li><input type="radio" id="main-dish">Main Dish</li>
-          <li><input type="radio" id="dessert">Dessert</li>
-        </ul> 
-      <button type="button" name="lets-cook" class="lets-cook-button">LET'S COOK</button>
+    <section class='container-1'>
+      <nav class="nav-bar">
+        <h1>What's for Dinner?</h1>
+        <button type="button" name="add-recipe-button" class="add-recipe-button">Add Recipe</button>
+      </nav>
     </section>
-    <section class="display-random-meal-type">
+    <section class='container-2'> 
+      <section class="choose-meal-type">
+        <h2>What Are You Looking For?*</h2>
+          <ul style="list-style-type:none">
+            <li><input type="radio" id="side">Side</li>
+            <li><input type="radio" id="main-dish">Main Dish</li>
+            <li><input type="radio" id="dessert">Dessert</li>
+          </ul> 
+        <button type="button" name="lets-cook" class="lets-cook-button">LET'S 
+      COOK</button>
+      </section>
+    </section>
+    <section class='container-3'>
+      <section class="display-random-meal-type">
         <p class="you-should-make hidden">You Should Make</p> 
         <p class="item hidden">Food Item</p>
         <img class="pot" src="assets/cookpot.svg" alt="black clipart pot">
         <button type="button" name="clear" class="clear-button hidden">Clear</button>
-    </section>
+      </section>
+    </section>        
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>  
