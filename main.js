@@ -1,15 +1,15 @@
 
 var sides = [
-'Miso Glazed Carrots',
-'Coleslaw',
-'Garden Salad',
-'Crispy Potatoes',
-'Sweet Potato Tots',
-'Coconut Rice',
-'Caeser Salad',
-'Shrimp Summer Rolls',
-'Garlic Butter Mushrooms',
-'Hush Puppies',
+    'Miso Glazed Carrots',
+    'Coleslaw',
+    'Garden Salad',
+    'Crispy Potatoes',
+    'Sweet Potato Tots',
+    'Coconut Rice',
+    'Caeser Salad',
+    'Shrimp Summer Rolls',
+    'Garlic Butter Mushrooms',
+    'Hush Puppies',
 ]
 
 
@@ -56,7 +56,7 @@ var desserts = [
 var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#main-dish');
 var dessertButton = document.querySelector('#dessert');
-var letsCookButton = document.querySelector('.lets-ccok-button');
+var letsCookButton = document.querySelector('.lets-cook-button');
 var clearButton = document.querySelector('.clear-button');
 
 // text
@@ -67,18 +67,22 @@ var itemToDisplay = document.querySelector('.item');
 var cookpotImg = document.querySelector('.pot')
 
 // event listeners
-sideButton.addEventListener('click', displaySide);
-mainDishButton.addEventListener('click', displayMain);
-dessertButton.addEventListener('click', displayDessert)
+sideButton.addEventListener('click', getRandomSide);
+mainDishButton.addEventListener('click', getRandomMain);
+dessertButton.addEventListener('click', getRandomDessert);
+
+letsCookButton.addEventListener('click', displayFood);
+
 
 // global variables?
-var currentFoodType;
+// var currentFoodType;
 
 // functions
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
+
 function randomFoodType(sides, mains, desserts) {
     return {
         sides: sides,
@@ -86,36 +90,53 @@ function randomFoodType(sides, mains, desserts) {
         desserts: desserts,
     }
 }
+
 function getRandomSide() {
-    var randomSide = sides[getRandomIndex(sides)];
-    // return randomSide
+    return sides[getRandomIndex(sides)];
 }
-function getRandomMain(){
-    var randomMain = mains[getRandomIndex(mains)];
-    // return randomMain
-}
-function getRandomDessert(){
-    var randomDessert = desserts[getRandomIndex(desserts)];
-    // return randomDessert
-}
-
 function displaySide(){
-    // currentFoodType = sides[getRandomIndex(sides)] 
-
     youShouldMakeText.classList.remove('hidden');
     cookpotImg.classList.add('hidden');
     itemToDisplay.classList.remove('hidden');
+    clearButton.classList.remove('hidden');
 
-    // itemToDisplay.innerText = currentFoodType
+    return itemToDisplay.innerText = sides[getRandomIndex(sides)]
 }
-console.log(displaySide())
 
+
+function getRandomMain(){
+    return mains[getRandomIndex(mains)];
+}
 function displayMain(){
     youShouldMakeText.classList.remove('hidden');
     cookpotImg.classList.add('hidden');
+    itemToDisplay.classList.remove('hidden');
+    clearButton.classList.remove('hidden');
+
+    return itemToDisplay.innerText = mains[getRandomIndex(mains)];
 }
+
+function getRandomDessert(){
+    return desserts[getRandomIndex(desserts)]; 
+}
+
 function displayDessert(){
     youShouldMakeText.classList.remove('hidden');
     cookpotImg.classList.add('hidden');
+    itemToDisplay.classList.remove('hidden');
+    clearButton.classList.remove('hidden');
 
+    return itemToDisplay.innerText = desserts[getRandomIndex(desserts)];
 }
+
+function displayFood(){
+    displaySide();
+    displayMain();
+    displayDessert();
+}
+
+
+
+
+
+

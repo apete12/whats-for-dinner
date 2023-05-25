@@ -81,6 +81,10 @@ body {
     background-image: url("./assets/burger-friends.jpg");
 }
 
+.hidden {
+    display: none!important;
+}
+
 
 
 
