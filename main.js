@@ -67,15 +67,48 @@ var itemToDisplay = document.querySelector('.item');
 var cookpotImg = document.querySelector('.pot')
 
 // event listeners
+sideButton.addEventListener('click', getRandomSide);
+mainDishButton.addEventListener('click', getRandomMain);
+dessertButton.addEventListener('click', getRandomDessert)
 
 // global variables?
 
 // functions
 
-function randomIndexNumber() {
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length)
+}
+
+function randomFoodType(sides, mains, desserts) {
+    return {
+        sides: sides,
+        mains: mains,
+        desserts: desserts,
+    }
+}
+
+function getRandomSide() {
+    var randomSide = sides[getRandomIndex(sides)];
+    return randomSide
+}
+
+function getRandomMain(){
+    var randomMain = mains[getRandomIndex(mains)];
+    return randomMain
+}
+function getRandomDessert(){
+    var randomDessert = desserts[getRandomIndex(desserts)];
+    return randomDessert
+}
+
+function displaySide(){
 
 }
 
-function randomFoodType() {
+function displayMain(){
 
+}
+
+function displayDessert(){
+    
 }
