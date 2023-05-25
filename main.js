@@ -78,7 +78,6 @@ dessertButton.addEventListener('click', getRandomDessert)
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
-
 function randomFoodType(sides, mains, desserts) {
     return {
         sides: sides,
@@ -86,12 +85,10 @@ function randomFoodType(sides, mains, desserts) {
         desserts: desserts,
     }
 }
-
 function getRandomSide() {
     var randomSide = sides[getRandomIndex(sides)];
     return randomSide
 }
-
 function getRandomMain(){
     var randomMain = mains[getRandomIndex(mains)];
     return randomMain
@@ -110,5 +107,5 @@ function displayMain(){
 }
 
 function displayDessert(){
-    
+
 }
