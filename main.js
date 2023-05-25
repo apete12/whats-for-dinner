@@ -73,6 +73,8 @@ dessertButton.addEventListener('click', getRandomDessert);
 
 letsCookButton.addEventListener('click', displayFood);
 
+clearButton.addEventListener('click', clearFoods)
+
 
 // global variables?
 // var currentFoodType;
@@ -133,6 +135,13 @@ function displayFood(){
     displaySide();
     displayMain();
     displayDessert();
+}
+
+function clearFoods(){
+    youShouldMakeText.classList.add('hidden');
+    cookpotImg.classList.remove('hidden');
+    itemToDisplay.classList.add('hidden');
+    clearButton.classList.add('hidden');
 }
 
 
