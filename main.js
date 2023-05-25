@@ -53,9 +53,9 @@ var desserts = [
 // query selectors
 
 // buttons:
-var sideButton = document.querySelector('.side');
-var mainDishButton = document.querySelector('.main-dish');
-var dessertButton = document.querySelector('.dessert');
+var sideButton = document.querySelector('#side');
+var mainDishButton = document.querySelector('#main-dish');
+var dessertButton = document.querySelector('#dessert');
 var letsCookButton = document.querySelector('.lets-ccok-button');
 var clearButton = document.querySelector('.clear-button');
 
@@ -67,11 +67,12 @@ var itemToDisplay = document.querySelector('.item');
 var cookpotImg = document.querySelector('.pot')
 
 // event listeners
-sideButton.addEventListener('click', getRandomSide);
-mainDishButton.addEventListener('click', getRandomMain);
-dessertButton.addEventListener('click', getRandomDessert)
+sideButton.addEventListener('click', displaySide);
+mainDishButton.addEventListener('click', displayMain);
+dessertButton.addEventListener('click', displayDessert)
 
 // global variables?
+var currentFoodType;
 
 // functions
 
@@ -87,25 +88,34 @@ function randomFoodType(sides, mains, desserts) {
 }
 function getRandomSide() {
     var randomSide = sides[getRandomIndex(sides)];
-    return randomSide
+    // return randomSide
 }
 function getRandomMain(){
     var randomMain = mains[getRandomIndex(mains)];
-    return randomMain
+    // return randomMain
 }
 function getRandomDessert(){
     var randomDessert = desserts[getRandomIndex(desserts)];
-    return randomDessert
+    // return randomDessert
 }
 
 function displaySide(){
+    // currentFoodType = sides[getRandomIndex(sides)] 
 
+    youShouldMakeText.classList.remove('hidden');
+    cookpotImg.classList.add('hidden');
+    itemToDisplay.classList.remove('hidden');
+
+    // itemToDisplay.innerText = currentFoodType
 }
+console.log(displaySide())
 
 function displayMain(){
-
+    youShouldMakeText.classList.remove('hidden');
+    cookpotImg.classList.add('hidden');
 }
-
 function displayDessert(){
+    youShouldMakeText.classList.remove('hidden');
+    cookpotImg.classList.add('hidden');
 
 }
