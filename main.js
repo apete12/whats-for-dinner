@@ -1,4 +1,3 @@
-
 var sides = [
     'Miso Glazed Carrots',
     'Coleslaw',
@@ -52,12 +51,17 @@ var desserts = [
 
 // query selectors
 
-// buttons:
+// radio buttons:
 var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#main-dish');
 var dessertButton = document.querySelector('#dessert');
+var wholeMealButton = document.querySelector('#whole-meal')
+var radioButtons = document.querySelectorAll('input[type=radio]')
+
+// buttons:
 var letsCookButton = document.querySelector('.lets-cook-button');
 var clearButton = document.querySelector('.clear-button');
+
 
 // text
 var youShouldMakeText = document.querySelector('.you-should-make');
@@ -70,14 +74,13 @@ var cookpotImg = document.querySelector('.pot')
 sideButton.addEventListener('click', getRandomSide);
 mainDishButton.addEventListener('click', getRandomMain);
 dessertButton.addEventListener('click', getRandomDessert);
-
 letsCookButton.addEventListener('click', displayFood);
-
 clearButton.addEventListener('click', clearFoods)
 
 
 // global variables?
-// var currentFoodType;
+
+var currentFoodType = [];
 
 // functions
 
@@ -85,60 +88,57 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
 
-function randomFoodType(sides, mains, desserts) {
-    return {
-        sides: sides,
-        mains: mains,
-        desserts: desserts,
-    }
-}
-
 function getRandomSide() {
     return sides[getRandomIndex(sides)];
 }
-function displaySide(){
-    youShouldMakeText.classList.remove('hidden');
-    cookpotImg.classList.add('hidden');
-    itemToDisplay.classList.remove('hidden');
-    clearButton.classList.remove('hidden');
 
+function displaySide(){
     return itemToDisplay.innerText = sides[getRandomIndex(sides)]
 }
-
 
 function getRandomMain(){
     return mains[getRandomIndex(mains)];
 }
-function displayMain(){
-    youShouldMakeText.classList.remove('hidden');
-    cookpotImg.classList.add('hidden');
-    itemToDisplay.classList.remove('hidden');
-    clearButton.classList.remove('hidden');
 
+function displayMain(){
     return itemToDisplay.innerText = mains[getRandomIndex(mains)];
 }
 
 function getRandomDessert(){
-    return desserts[getRandomIndex(desserts)]; 
+    return desserts[getRandomIndex(desserts)];
 }
 
 function displayDessert(){
+    return itemToDisplay.innerText = desserts[getRandomIndex(desserts)];
+}
+
+function getWholeMeal(){
+    itemToDisplay.innerText = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`
+}
+   
+function displayFood(){
+    toggleText()
+    if(sideButton.checked) {
+        return displaySide();
+    } if(mainDishButton.checked) {
+        return displayMain();
+    } if(dessertButton.checked) {
+        return displayDessert();
+    } if(wholeMealButton.checked) {
+        return getWholeMeal()
+    }
+}
+function clearRadioButtons() {
+    for(var i=0; i <radioButtons.length; i++){
+        radioButtons[i].checked = false;
+    }
+}
+
+function toggleText(){
     youShouldMakeText.classList.remove('hidden');
     cookpotImg.classList.add('hidden');
     itemToDisplay.classList.remove('hidden');
     clearButton.classList.remove('hidden');
-
-    return itemToDisplay.innerText = desserts[getRandomIndex(desserts)];
-}
-
-// function toggleText(){
-// 
-// }
-function displayFood(){
-    displaySide();
-    displayMain();
-    displayDessert();
-    // toggleText();
 }
 
 function clearFoods(){
@@ -146,10 +146,6 @@ function clearFoods(){
     cookpotImg.classList.remove('hidden');
     itemToDisplay.classList.add('hidden');
     clearButton.classList.add('hidden');
+
+    clearRadioButtons()
 }
-
-
-
-
-
-
