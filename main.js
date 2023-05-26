@@ -49,7 +49,7 @@ var desserts = [
     'Eclairs',
 ]
 
-// query selectors
+// query selectors:
 
 // radio buttons:
 var sideButton = document.querySelector('#side');
@@ -71,63 +71,46 @@ var itemToDisplay = document.querySelector('.item');
 var cookpotImg = document.querySelector('.pot')
 
 // event listeners
-sideButton.addEventListener('click', getRandomSide);
-mainDishButton.addEventListener('click', getRandomMain);
-dessertButton.addEventListener('click', getRandomDessert);
 letsCookButton.addEventListener('click', displayFood);
 clearButton.addEventListener('click', clearFoods)
 
 
-// global variables?
-
-var currentFoodType = [];
+// global variables
+var currentFoodType;
+var wholeMeal;
 
 // functions
-
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
 
-function getRandomSide() {
-    return sides[getRandomIndex(sides)];
-}
-
-function displaySide(){
-    return itemToDisplay.innerText = sides[getRandomIndex(sides)]
-}
-
-function getRandomMain(){
-    return mains[getRandomIndex(mains)];
-}
-
-function displayMain(){
-    return itemToDisplay.innerText = mains[getRandomIndex(mains)];
-}
-
-function getRandomDessert(){
-    return desserts[getRandomIndex(desserts)];
-}
-
-function displayDessert(){
-    return itemToDisplay.innerText = desserts[getRandomIndex(desserts)];
-}
-
 function getWholeMeal(){
-    itemToDisplay.innerText = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`
+    wholeMeal = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex
+    (desserts)]}`
+
+    return wholeMeal
 }
-   
+
+function generateFood(){
+    if(sideButton.checked) {
+        currentFoodType = sides[getRandomIndex(sides)];
+    } if(mainDishButton.checked) {
+        currentFoodType = mains[getRandomIndex(mains)];
+    } if(dessertButton.checked) {
+        currentFoodType = desserts[getRandomIndex(desserts)];
+    } if(wholeMealButton.checked) {
+        currentFoodType = getWholeMeal()
+    }
+    return currentFoodType
+}
+
 function displayFood(){
     toggleText()
-    if(sideButton.checked) {
-        return displaySide();
-    } if(mainDishButton.checked) {
-        return displayMain();
-    } if(dessertButton.checked) {
-        return displayDessert();
-    } if(wholeMealButton.checked) {
-        return getWholeMeal()
-    }
+    generateFood()
+
+    itemToDisplay.innerText = currentFoodType
 }
+
 function clearRadioButtons() {
     for(var i=0; i <radioButtons.length; i++){
         radioButtons[i].checked = false;
