@@ -51,14 +51,17 @@ var desserts = [
 
 // query selectors
 
-// buttons:
+// radio buttons:
 var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#main-dish');
 var dessertButton = document.querySelector('#dessert');
 var wholeMealButton = document.querySelector('#whole-meal')
+var radioButtons = document.querySelectorAll('input[type=radio]')
+
+// buttons:
 var letsCookButton = document.querySelector('.lets-cook-button');
 var clearButton = document.querySelector('.clear-button');
-var radioButtons = document.querySelectorAll('input[type=radio]')
+
 
 // text
 var youShouldMakeText = document.querySelector('.you-should-make');
@@ -110,8 +113,7 @@ function displayDessert(){
 }
 
 function getWholeMeal(){
-    itemToDisplay.innerText = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts
-   [getRandomIndex(desserts)]}`
+    itemToDisplay.innerText = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`
 }
    
 function displayFood(){
@@ -147,4 +149,3 @@ function clearFoods(){
 
     clearRadioButtons()
 }
-console.log(clearRadioButtons())
