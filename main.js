@@ -131,10 +131,14 @@ function displayDessert(){
     return itemToDisplay.innerText = desserts[getRandomIndex(desserts)];
 }
 
+// function toggleText(){
+// 
+// }
 function displayFood(){
     displaySide();
     displayMain();
     displayDessert();
+    // toggleText();
 }
 
 function clearFoods(){
