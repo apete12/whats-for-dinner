@@ -56,6 +56,7 @@ var desserts = [
 var sideButton = document.querySelector('#side');
 var mainDishButton = document.querySelector('#main-dish');
 var dessertButton = document.querySelector('#dessert');
+var wholeMealButton = document.querySelector('#whole-meal')
 var letsCookButton = document.querySelector('.lets-cook-button');
 var clearButton = document.querySelector('.clear-button');
 
@@ -70,27 +71,18 @@ var cookpotImg = document.querySelector('.pot')
 sideButton.addEventListener('click', getRandomSide);
 mainDishButton.addEventListener('click', getRandomMain);
 dessertButton.addEventListener('click', getRandomDessert);
-
+wholeMealButton.addEventListener('click', getWholeMeal)
 letsCookButton.addEventListener('click', displayFood);
 
 clearButton.addEventListener('click', clearFoods)
 
-
 // global variables?
-// var currentFoodType;
+var wholeMeal;
 
 // functions
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
-}
-
-function randomFoodType(sides, mains, desserts) {
-    return {
-        sides: sides,
-        mains: mains,
-        desserts: desserts,
-    }
 }
 
 function getRandomSide() {
@@ -132,13 +124,14 @@ function displayDessert(){
 }
 
 // function toggleText(){
-// 
+// create toggle function to improve DRY 
 // }
+
 function displayFood(){
     displaySide();
     displayMain();
     displayDessert();
-    // toggleText();
+    displayWholeMeal();
 }
 
 function clearFoods(){
@@ -148,7 +141,20 @@ function clearFoods(){
     clearButton.classList.add('hidden');
 }
 
+function getWholeMeal(){
+    wholeMeal = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex(desserts)]}`
+}
 
+function displayWholeMeal(){
+    youShouldMakeText.classList.remove('hidden');
+    cookpotImg.classList.add('hidden');
+    itemToDisplay.classList.remove('hidden');
+    clearButton.classList.remove('hidden');
+
+    return itemToDisplay.innerText = wholeMeal;
+}
+
+   
 
 
 
