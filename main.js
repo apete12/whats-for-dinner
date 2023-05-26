@@ -58,6 +58,7 @@ var dessertButton = document.querySelector('#dessert');
 var wholeMealButton = document.querySelector('#whole-meal')
 var letsCookButton = document.querySelector('.lets-cook-button');
 var clearButton = document.querySelector('.clear-button');
+var radioButtons = document.querySelectorAll('input[type=radio]')
 
 // text
 var youShouldMakeText = document.querySelector('.you-should-make');
@@ -125,31 +126,11 @@ function displayFood(){
         return getWholeMeal()
     }
 }
-
-
-// 
-// function selectRadioButtons() {
-    // for (var i=0; i <radioButton.length; i++){
-        // if(radioButton[i].checked){
-            // var selectedFoodType = radioButton[i].value;
-        // }
-    // }
-    // return selectedFoodType
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function clearRadioButtons() {
+    for(var i=0; i <radioButtons.length; i++){
+        radioButtons[i].checked = false;
+    }
+}
 
 function toggleText(){
     youShouldMakeText.classList.remove('hidden');
@@ -158,26 +139,12 @@ function toggleText(){
     clearButton.classList.remove('hidden');
 }
 
-
-
-
 function clearFoods(){
-    // currentFoodType = '';
-
     youShouldMakeText.classList.add('hidden');
     cookpotImg.classList.remove('hidden');
     itemToDisplay.classList.add('hidden');
     clearButton.classList.add('hidden');
+
+    clearRadioButtons()
 }
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(clearRadioButtons())
