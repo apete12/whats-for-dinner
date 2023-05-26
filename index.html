@@ -5,32 +5,26 @@
     <title>What's For Dinner?</title>
   </head>
   <body>
-    <section class='container-1'>
-      <nav class="nav-bar">
-        <h1>What's for Dinner?</h1>
-        <button type="button" name="add-recipe-button" class="add-recipe-button">ADD A RECIPE</button>
-      </nav>
+    <nav class="nav-bar">
+      <h1>What's for Dinner?</h1>
+      <button type="button" name="add-recipe-button" class="add-recipe-button">ADD A RECIPE</button>
+    </nav>
+    <section class="choose-meal-type">
+      <h2>What Are You Looking For?<span style="color:#ee5253">*</span></h2>
+        <ul style="list-style-type:none">
+          <li><input type="radio" name="radio" value="side" id="side">Side</li>
+          <li><input type="radio" name="radio" value="main-dish" id="main-dish">Main Dish</li>
+          <li><input type="radio" name="radio" value="dessert" id="dessert">Dessert</li>
+          <li><input type="radio" name="radio" value="whole-meal" id="whole-meal">Whole Meal</li>
+        </ul> 
+      <button type="button" name="lets-cook" class="lets-cook-button">LET'S COOK</button>
     </section>
-    <section class='container-2'> 
-      <section class="choose-meal-type">
-        <h2>What Are You Looking For?*</h2>
-          <ul style="list-style-type:none">
-            <li><input type="radio" name="radio" value="side" id="side">Side</li>
-            <li><input type="radio" name="radio" value="main-dish" id="main-dish">Main Dish</li>
-            <li><input type="radio" name="radio" value="dessert" id="dessert">Dessert</li>
-            <li><input type="radio" name="radio" value="whole-meal" id="whole-meal">Whole Meal</li>
-          </ul> 
-        <button type="button" name="lets-cook" class="lets-cook-button">LET'S COOK</button>
-      </section>
-    </section>
-    <section class='container-3'>
       <section class="display-random-meal-type">
         <p class="you-should-make hidden">You Should Make</p> 
         <p class="item hidden">Food Item</p>
         <img class="pot" src="assets/cookpot.svg" alt="black clipart pot">
         <button type="button" name="clear" class="clear-button hidden">Clear</button>
-      </section>
-    </section>        
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>  

@@ -5,10 +5,9 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
 
-.container-1 {
+.nav-bar{
     font-family:"Roboto";
     font-size: 32px;
     background-color: #0fb9b1;
@@ -26,19 +25,16 @@ h1{
     border-radius: 10px;
 }
 
-/* .container-3, */
-/* .container-2{ */
-    /* background-color: rgba(225, 225, 225, .9); */
-    /* border-color: black; */
-    /* border-width: 50px; */
-    /* border-width: 50px; */
-    /* display: flex; */
-/* } */
-
 h2{
     padding: 25px;
 }
 
+ul{
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
 
 h3,
 .you-should-make{
@@ -46,13 +42,13 @@ h3,
     font-family: Roboto;
     font-size: 28px;
     position: center;
-    margin: 75px;
+    margin: 25px;
 }
 .item{
     font-family: Roboto;
     font-size: 32px;
     position: center;
-    margin: 75px;
+    margin: 25px;
 
 }
 
@@ -63,7 +59,7 @@ h3,
 }
 .clear-button {
     border-style: solid white;
-    margin: 25px;
+    margin-left: 20px;
     padding: 10px;
     border-radius: 5px;
     background-color: #95a5a6;
