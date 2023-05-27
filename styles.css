@@ -37,13 +37,21 @@ ul{
     margin-top: 5px;
 }
 
-h3,
+h3 {
+    font-style: italic;
+    font-family: Roboto;
+    font-size: 28px;
+    position: center;
+    margin-bottom: 25px;
+}
+
 .you-should-make{
     font-style: italic;
     font-family: Roboto;
     font-size: 28px;
     position: center;
-    margin: 25px;
+    margin-top: 75px;
+    margin-left: 25px;
 }
 .item{
     font-family: Roboto;
