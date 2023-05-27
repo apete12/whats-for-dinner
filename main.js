@@ -94,13 +94,15 @@ function getWholeMeal(){
 function generateFood(){
     if(sideButton.checked) {
         currentFoodType = sides[getRandomIndex(sides)];
-    } if(mainDishButton.checked) {
+    } else if (mainDishButton.checked) {
         currentFoodType = mains[getRandomIndex(mains)];
-    } if(dessertButton.checked) {
+    } else if (dessertButton.checked) {
         currentFoodType = desserts[getRandomIndex(desserts)];
-    } if(wholeMealButton.checked) {
+    } else if (wholeMealButton.checked) {
         currentFoodType = getWholeMeal()
-    } 
+    } else {
+        currentFoodType = 'Please select Side, Main Dish, Dessert, or Whole Meal!'
+    }
     return currentFoodType
 }
 
