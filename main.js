@@ -100,7 +100,7 @@ function generateFood(){
         currentFoodType = desserts[getRandomIndex(desserts)];
     } if(wholeMealButton.checked) {
         currentFoodType = getWholeMeal()
-    }
+    } 
     return currentFoodType
 }
 
