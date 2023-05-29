@@ -84,13 +84,6 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length)
 }
 
-function getWholeMeal(){
-    wholeMeal = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex
-    (desserts)]}`
-
-    return wholeMeal
-}
-
 function generateFood(){
     if(sideButton.checked) {
         currentFoodType = sides[getRandomIndex(sides)];
@@ -113,10 +106,11 @@ function displayFood(){
     itemToDisplay.innerText = currentFoodType
 }
 
-function clearRadioButtons() {
-    for(var i=0; i <radioButtons.length; i++){
-        radioButtons[i].checked = false;
-    }
+function getWholeMeal(){
+    wholeMeal = `${sides[getRandomIndex(sides)]}, ${mains[getRandomIndex(mains)]}, and ${desserts[getRandomIndex
+    (desserts)]}`
+
+    return wholeMeal
 }
 
 function toggleText(){
@@ -124,6 +118,12 @@ function toggleText(){
     cookpotImg.classList.add('hidden');
     itemToDisplay.classList.remove('hidden');
     clearButton.classList.remove('hidden');
+}
+
+function clearRadioButtons() {
+    for(var i=0; i <radioButtons.length; i++){
+        radioButtons[i].checked = false;
+    }
 }
 
 function clearFoods(){
@@ -134,3 +134,16 @@ function clearFoods(){
 
     clearRadioButtons()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
