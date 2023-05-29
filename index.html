@@ -7,7 +7,6 @@
   <body>
     <nav class="nav-bar">
       <h1>What's for Dinner?</h1>
-      <button type="button" name="add-recipe-button" class="add-recipe-button">ADD A RECIPE</button>
     </nav>
     <section class="choose-meal-type">
       <h2>What Are You Looking For?<span style="color:#ee5253">*</span></h2>
@@ -20,9 +19,16 @@
       <button type="button" name="lets-cook" class="lets-cook-button">LET'S COOK</button>
     </section>
       <section class="display-random-meal-type">
-        <p class="you-should-make hidden">You Should Make</p> 
-        <p class="item hidden">Food Item</p>
-        <img class="pot" src="assets/cookpot.svg" alt="black clipart pot">
+        <div class="food-suggestions-structure">
+          <p class="you-should-make hidden">You Should Make</p> 
+          <p class="item hidden">Food Item</p>
+        </div>
+        <div class="image-structure">
+          <img class="pot" src="assets/cookpot.svg" alt="black clipart pot">
+        </div>
+        <div class="button-structure">
+          <button type="button" name="clear" class="clear-button hidden">Clear</button>
+        </div>
         <button type="button" name="clear" class="clear-button hidden">Clear</button>
     </section>
   </body>
