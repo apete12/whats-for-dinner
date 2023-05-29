@@ -19,6 +19,7 @@ h1{
 
 h2{
     padding: 25px;
+    font-size: 32px;
 }
 
 ul{
@@ -33,6 +34,7 @@ ul{
     font-style: italic;
     font-family: Roboto;
     font-size: 28px;
+  
 }
 .item{
     font-family: Roboto;
@@ -46,6 +48,8 @@ ul{
     margin: 25px;
     padding: 10px;
     border-radius: 5px;
+    background-color:#0fb9b1;
+    font-size: 20px;
 }
 .clear-button {
     margin: 25px;
